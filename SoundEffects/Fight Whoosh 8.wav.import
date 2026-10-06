@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://uxkd2q1q6rrv"
+path="res://.godot/imported/Fight Whoosh 8.wav-d1ebaf100582a54bbbb51796016b37cd.sample"
+
+[deps]
+
+source_file="res://Sounds/SoundEffects/Fight Whoosh 8.wav"
+dest_files=["res://.godot/imported/Fight Whoosh 8.wav-d1ebaf100582a54bbbb51796016b37cd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

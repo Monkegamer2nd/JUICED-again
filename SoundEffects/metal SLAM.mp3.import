@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://02bbti7ckif6"
+path="res://.godot/imported/metal SLAM.mp3-82d22949eee25c7028d096d9acc34acd.mp3str"
+
+[deps]
+
+source_file="res://Sounds/SoundEffects/metal SLAM.mp3"
+dest_files=["res://.godot/imported/metal SLAM.mp3-82d22949eee25c7028d096d9acc34acd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
