@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CARD_DATA" load_steps=5 format=3 uid="uid://bimwwmc13agxf"]
+
+[ext_resource type="Texture2D" uid="uid://dhcjc1b8tayd4" path="res://Sprites/Cards/CleanCut.png" id="1_pp306"]
+[ext_resource type="Script" uid="uid://8jm0p3xpvb65" path="res://Custom Resources/die_information.gd" id="2_e7eyx"]
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="3_b5smc"]
+
+[sub_resource type="Resource" id="Resource_nps2h"]
+script = ExtResource("2_e7eyx")
+type = 0
+min_roll = 2
+max_roll = 7
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[resource]
+script = ExtResource("3_b5smc")
+id = "Clean Cut"
+energy_cost = 4
+target = 0
+card_art = ExtResource("1_pp306")
+dice_list = Array[ExtResource("2_e7eyx")]([SubResource("Resource_nps2h")])
+metadata/_custom_type_script = "uid://ufsrn7110jdc"

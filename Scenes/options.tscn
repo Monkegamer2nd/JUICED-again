@@ -1,0 +1,187 @@
+[gd_scene load_steps=6 format=3 uid="uid://cj1nb7feymbpf"]
+
+[ext_resource type="Script" uid="uid://db0adh8381qrk" path="res://Scripts/local/options.gd" id="1_prnvy"]
+[ext_resource type="Texture2D" uid="uid://m08vu5qaqiee" path="res://Sprites/Background/OptionsBackground.png" id="2_4tmxy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyyw6"]
+atlas = ExtResource("2_4tmxy")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww8vx"]
+atlas = ExtResource("2_4tmxy")
+region = Rect2(0, 648, 1152, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kftxf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyyw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww8vx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_prnvy")
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 324)
+sprite_frames = SubResource("SpriteFrames_kftxf")
+autoplay = "default"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_right = 73.0
+offset_bottom = 31.0
+text = "Back"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 445.0
+offset_right = 697.0
+offset_bottom = 476.0
+text = "Quit"
+
+[node name="MasterSoundLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.334
+anchor_bottom = 0.105
+offset_left = 289.0
+offset_top = 85.0
+offset_right = 407.232
+offset_bottom = 39.96
+theme_override_constants/outline_size = 10
+text = "Master"
+horizontal_alignment = 1
+
+[node name="MasterPercentage" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.334
+anchor_bottom = 0.105
+offset_left = 220.0
+offset_top = 116.0
+offset_right = -109.768
+offset_bottom = 70.96
+theme_override_constants/outline_size = 10
+text = "100%"
+horizontal_alignment = 1
+
+[node name="MasterSoud" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 273.0
+offset_top = 121.0
+offset_right = -339.0
+offset_bottom = -511.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="MusicLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.334
+anchor_bottom = 0.105
+offset_left = 289.0
+offset_top = 157.0
+offset_right = 407.232
+offset_bottom = 111.96
+theme_override_constants/outline_size = 10
+text = "Music"
+horizontal_alignment = 1
+
+[node name="MusicPercentage" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.334
+anchor_bottom = 0.105
+offset_left = 220.0
+offset_top = 179.0
+offset_right = -109.768
+offset_bottom = 133.96
+theme_override_constants/outline_size = 10
+text = "100%"
+horizontal_alignment = 1
+
+[node name="Music" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 183.0
+offset_right = 813.0
+offset_bottom = 199.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="SoundEffectLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.334
+anchor_bottom = 0.105
+offset_left = 288.0
+offset_top = 215.0
+offset_right = 406.232
+offset_bottom = 169.96
+theme_override_constants/outline_size = 10
+text = "Sound Effects"
+horizontal_alignment = 1
+
+[node name="SoundEffectPercentage" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.334
+anchor_bottom = 0.105
+offset_left = 222.0
+offset_top = 245.0
+offset_right = -107.768
+offset_bottom = 199.96
+theme_override_constants/outline_size = 10
+text = "100%"
+horizontal_alignment = 1
+
+[node name="SFX" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 247.0
+offset_right = 813.0
+offset_bottom = 263.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="FullscreenButton" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 297.0
+offset_right = 614.0
+offset_bottom = 328.0
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 20
+text = "Fullscreen"
+
+[node name="CREDITS" type="Button" parent="."]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 366.0
+offset_right = 774.0
+offset_bottom = 412.0
+text = "CREDITS"
+
+[connection signal="toggled" from="FullscreenButton" to="." method="_on_fullscreen_button_toggled"]

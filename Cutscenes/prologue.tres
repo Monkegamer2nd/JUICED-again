@@ -1,0 +1,495 @@
+[gd_resource type="Resource" script_class="CutsceneData" load_steps=75 format=3 uid="uid://5jq3j87cgxcf"]
+
+[ext_resource type="Script" uid="uid://cq8x3unfkqgsx" path="res://Custom Resources/cutscene_information.gd" id="1_5cmww"]
+[ext_resource type="Script" uid="uid://bhvt02xh3pqmd" path="res://Custom Resources/cutscenecommand.gd" id="1_kw8le"]
+[ext_resource type="Script" uid="uid://sxj1qy335rq2" path="res://Custom Resources/cmdbackground.gd" id="2_1a734"]
+[ext_resource type="Texture2D" uid="uid://764xfwlichxm" path="res://Sprites/Background/WhiteHouseBackground (1).png" id="3_br4gc"]
+[ext_resource type="Script" uid="uid://bdv8hwcesqfca" path="res://Custom Resources/cmddialogue.gd" id="4_0rqsd"]
+[ext_resource type="Texture2D" uid="uid://be5bgafurya45" path="res://Sprites/Characters/ChancellorTangerineTalk.png" id="5_1a734"]
+[ext_resource type="AudioStream" uid="uid://blfgsedutfwvx" path="res://Sounds/SoundEffects/Explosion glass break.mp3" id="6_br4gc"]
+[ext_resource type="Texture2D" uid="uid://cne8jh4l0lb3n" path="res://Sprites/Characters/JohnJuiced (1).png" id="7_0rqsd"]
+[ext_resource type="AudioStream" uid="uid://biv60kpit5jvb" path="res://Sounds/SoundEffects/Fight Hit 13.wav" id="8_iu1mr"]
+[ext_resource type="AudioStream" uid="uid://dgs2yjfdm6mq4" path="res://Sounds/SoundEffects/Fight Hit 15.wav" id="9_al1d2"]
+[ext_resource type="AudioStream" uid="uid://cak5o6uwjovam" path="res://Sounds/SoundEffects/rock break.wav" id="10_vyd5o"]
+[ext_resource type="AudioStream" uid="uid://d1ypfsng0jhvq" path="res://Sounds/SoundEffects/bodyfall.mp3" id="11_e244u"]
+[ext_resource type="Texture2D" uid="uid://dto15bxqkseaw" path="res://Sprites/Background/PrisonBackground.png" id="12_vyd5o"]
+[ext_resource type="Texture2D" uid="uid://l7v38by5pde7" path="res://Sprites/Characters/OddTodd (3).png" id="13_e244u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_br4gc"]
+atlas = ExtResource("3_br4gc")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="Resource" id="Resource_iu1mr"]
+script = ExtResource("2_1a734")
+sheet_path = SubResource("AtlasTexture_br4gc")
+grid_columns = 0
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://sxj1qy335rq2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a734"]
+atlas = ExtResource("5_1a734")
+region = Rect2(350, 0, 350, 300)
+
+[sub_resource type="Resource" id="Resource_2divo"]
+script = ExtResource("4_0rqsd")
+speaker = "Chancellor Tangerine"
+position = "left"
+text = "Hmm, what a peaceful day. Such a perfect day to protect the people of this nation from a potent poison."
+sheet_path = SubResource("AtlasTexture_1a734")
+grid_columns = 1
+grid_rows = 3
+frame_x = 350
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rqsd"]
+atlas = ExtResource("5_1a734")
+region = Rect2(0, 0, 350, 300)
+
+[sub_resource type="Resource" id="Resource_br4gc"]
+script = ExtResource("4_0rqsd")
+speaker = "Chancellor Tangerine"
+position = "left"
+text = "FUN JUICE!"
+sheet_path = SubResource("AtlasTexture_0rqsd")
+grid_columns = 1
+grid_rows = 3
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu1mr"]
+atlas = ExtResource("5_1a734")
+region = Rect2(0, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_m6ht0"]
+script = ExtResource("4_0rqsd")
+speaker = "Chancellor Tangerine"
+position = "left"
+text = "All I've got to do is all this... Boring... Paperwork..... It'll all be worth it. This gunk is literally pure radiati-"
+sheet_path = SubResource("AtlasTexture_iu1mr")
+grid_columns = 1
+grid_rows = 3
+frame_x = 0
+frame_y = 300
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6ht0"]
+atlas = ExtResource("3_br4gc")
+region = Rect2(0, 648, 1152, 648)
+
+[sub_resource type="Resource" id="Resource_1a734"]
+script = ExtResource("2_1a734")
+sheet_path = SubResource("AtlasTexture_m6ht0")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+play_sound = ExtResource("6_br4gc")
+metadata/_custom_type_script = "uid://sxj1qy335rq2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2divo"]
+atlas = ExtResource("7_0rqsd")
+region = Rect2(1050, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_al1d2"]
+script = ExtResource("4_0rqsd")
+speaker = "John Juiced"
+position = "right"
+text = "STOP! Right. There!"
+sheet_path = SubResource("AtlasTexture_2divo")
+grid_columns = 1
+grid_rows = 1
+frame_x = 1050
+frame_y = 300
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al1d2"]
+atlas = ExtResource("5_1a734")
+region = Rect2(0, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_vyd5o"]
+script = ExtResource("4_0rqsd")
+speaker = "Chancellor Tangerine"
+position = "left"
+text = "... And who are you?"
+sheet_path = SubResource("AtlasTexture_al1d2")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e244u"]
+atlas = ExtResource("7_0rqsd")
+region = Rect2(700, 0, 350, 300)
+
+[sub_resource type="Resource" id="Resource_p8hdj"]
+script = ExtResource("4_0rqsd")
+speaker = "John Juiced"
+position = "right"
+text = "Why aren't you more surprised? Didn't you see how cool I was mowing through your forces on this convienetly large road with all your cops on it."
+sheet_path = SubResource("AtlasTexture_e244u")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyd5o"]
+atlas = ExtResource("5_1a734")
+region = Rect2(350, 0, 350, 300)
+
+[sub_resource type="Resource" id="Resource_e244u"]
+script = ExtResource("4_0rqsd")
+speaker = "Chancellor Tangerine"
+position = "left"
+text = "I've seen much MUCH more impressive things before. So if you wouldn't mind, get off my property."
+sheet_path = SubResource("AtlasTexture_vyd5o")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8hdj"]
+atlas = ExtResource("5_1a734")
+region = Rect2(0, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_le704"]
+script = ExtResource("4_0rqsd")
+speaker = "Chancellor Tangerine"
+position = "left"
+text = "HEY!- OW!! What's that for!"
+sheet_path = SubResource("AtlasTexture_p8hdj")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+play_sound = ExtResource("8_iu1mr")
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le704"]
+atlas = ExtResource("7_0rqsd")
+region = Rect2(350, 0, 350, 300)
+
+[sub_resource type="Resource" id="Resource_mt88u"]
+script = ExtResource("4_0rqsd")
+speaker = "John Juiced"
+position = "right"
+text = "Preettty sure I made it pretty clear that I was here to kill you. With the whole car crashed into the wall of your office thing going on."
+sheet_path = SubResource("AtlasTexture_le704")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mt88u"]
+atlas = ExtResource("5_1a734")
+region = Rect2(350, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_61c3f"]
+script = ExtResource("4_0rqsd")
+speaker = "Chancellor Tangerine"
+position = "left"
+text = "STOP IT! You dolt! Don't you realize that juice you sip is only going to lead to your early tomb!"
+sheet_path = SubResource("AtlasTexture_mt88u")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8qq6"]
+atlas = ExtResource("7_0rqsd")
+region = Rect2(1050, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_nj7cd"]
+script = ExtResource("4_0rqsd")
+speaker = "John Juiced"
+position = "right"
+text = "Does it look like I care? Without Fun Juice I CAN'T live! I'm gonna end your tyranny right now! By turning YOU into juice!"
+sheet_path = SubResource("AtlasTexture_c8qq6")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61c3f"]
+atlas = ExtResource("5_1a734")
+region = Rect2(0, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_c8qq6"]
+script = ExtResource("4_0rqsd")
+speaker = "Chancellor Tangerine"
+position = "left"
+text = "GAH! GUARDS! GUARDS! DO SOMETHING!"
+sheet_path = SubResource("AtlasTexture_61c3f")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+play_sound = ExtResource("9_al1d2")
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nj7cd"]
+atlas = ExtResource("7_0rqsd")
+region = Rect2(350, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_nx0j6"]
+script = ExtResource("4_0rqsd")
+speaker = "John Juiced"
+position = "right"
+text = "GAGH!!"
+sheet_path = SubResource("AtlasTexture_nj7cd")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+play_sound = ExtResource("10_vyd5o")
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvoi5"]
+atlas = ExtResource("5_1a734")
+region = Rect2(350, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_7urmc"]
+script = ExtResource("4_0rqsd")
+speaker = "John Juiced"
+position = "right"
+text = "Auughhh..."
+sheet_path = SubResource("AtlasTexture_gvoi5")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+play_sound = ExtResource("11_e244u")
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nx0j6"]
+atlas = ExtResource("5_1a734")
+region = Rect2(350, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_gvoi5"]
+script = ExtResource("4_0rqsd")
+speaker = "Chancellor Tangerine"
+position = "left"
+text = "... Thank goodness... ARREST HIM ALREADY! He just tried to 'juice' the president!"
+sheet_path = SubResource("AtlasTexture_nx0j6")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7urmc"]
+atlas = ExtResource("12_vyd5o")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="Resource" id="Resource_gw2og"]
+script = ExtResource("2_1a734")
+sheet_path = SubResource("AtlasTexture_7urmc")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://sxj1qy335rq2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dst7m"]
+
+[sub_resource type="Resource" id="Resource_fuedq"]
+script = ExtResource("4_0rqsd")
+speaker = "???"
+position = "left"
+text = "Wakeeey wakeeey."
+sheet_path = SubResource("AtlasTexture_dst7m")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw2og"]
+atlas = ExtResource("7_0rqsd")
+region = Rect2(1050, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_dst7m"]
+script = ExtResource("4_0rqsd")
+speaker = "John Juiced"
+position = "left"
+text = "Huh! Who said that?"
+sheet_path = SubResource("AtlasTexture_gw2og")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuedq"]
+atlas = ExtResource("13_e244u")
+region = Rect2(350, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_rq8kv"]
+script = ExtResource("4_0rqsd")
+speaker = "???"
+position = "right"
+text = "Riiight here. I've been saying waaaakey waakey ever since you fell unconcious. Three weeks."
+sheet_path = SubResource("AtlasTexture_fuedq")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rq8kv"]
+atlas = ExtResource("7_0rqsd")
+region = Rect2(350, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_13inq"]
+script = ExtResource("4_0rqsd")
+speaker = "John Juiced"
+position = "left"
+text = "And who are you?"
+sheet_path = SubResource("AtlasTexture_rq8kv")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4l4e"]
+atlas = ExtResource("13_e244u")
+region = Rect2(0, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_qo6i3"]
+script = ExtResource("4_0rqsd")
+speaker = "Odd Todd"
+position = "right"
+text = "They call me Odd Todd here. Aaaand, since we're cellmates, I'll teach you how this place works"
+sheet_path = SubResource("AtlasTexture_y4l4e")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdrt4"]
+atlas = ExtResource("7_0rqsd")
+region = Rect2(700, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_hs43j"]
+script = ExtResource("4_0rqsd")
+speaker = "John Juiced"
+position = "left"
+text = "Why do they call you Odd Todd?"
+sheet_path = SubResource("AtlasTexture_bdrt4")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iksl5"]
+atlas = ExtResource("13_e244u")
+region = Rect2(0, 0, 350, 300)
+
+[sub_resource type="Resource" id="Resource_hb4sr"]
+script = ExtResource("4_0rqsd")
+speaker = "Odd Todd"
+position = "right"
+text = "..."
+sheet_path = SubResource("AtlasTexture_iksl5")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13inq"]
+atlas = ExtResource("13_e244u")
+region = Rect2(350, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_82321"]
+script = ExtResource("4_0rqsd")
+speaker = "Odd Todd"
+position = "right"
+text = "I will teach you how to fight. If you never learn, you'll never survive here."
+sheet_path = SubResource("AtlasTexture_13inq")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qo6i3"]
+atlas = ExtResource("7_0rqsd")
+region = Rect2(700, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_he60i"]
+script = ExtResource("4_0rqsd")
+speaker = "John Juiced"
+position = "left"
+text = "O... Kay? But I already know how to fight?"
+sheet_path = SubResource("AtlasTexture_qo6i3")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs43j"]
+atlas = ExtResource("13_e244u")
+region = Rect2(0, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_pbcl8"]
+script = ExtResource("4_0rqsd")
+speaker = "Odd Todd"
+position = "right"
+text = "Put down your hands! You're doing it all wrong! Here. We aaaaaalll fight using these cards!"
+sheet_path = SubResource("AtlasTexture_hs43j")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb4sr"]
+atlas = ExtResource("7_0rqsd")
+region = Rect2(350, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_uv12l"]
+script = ExtResource("4_0rqsd")
+speaker = "John Juiced"
+position = "left"
+text = "... Uhh... Whatever, just give me some. Whatever'll get me out of this prison. I still need to stop that evil Chancellor Tangerine from banning Fun Juice."
+sheet_path = SubResource("AtlasTexture_hb4sr")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82321"]
+atlas = ExtResource("13_e244u")
+region = Rect2(0, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_3u6de"]
+script = ExtResource("4_0rqsd")
+speaker = "Odd Todd"
+position = "right"
+text = "Good luck on that. We're at the very bottom of the prison, underground. You'll have a long journey ahead of you. But let's begin"
+sheet_path = SubResource("AtlasTexture_82321")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[resource]
+script = ExtResource("1_5cmww")
+commands = Array[ExtResource("1_kw8le")]([SubResource("Resource_iu1mr"), SubResource("Resource_2divo"), SubResource("Resource_br4gc"), SubResource("Resource_m6ht0"), SubResource("Resource_1a734"), SubResource("Resource_al1d2"), SubResource("Resource_vyd5o"), SubResource("Resource_p8hdj"), SubResource("Resource_e244u"), SubResource("Resource_le704"), SubResource("Resource_mt88u"), SubResource("Resource_61c3f"), SubResource("Resource_nj7cd"), SubResource("Resource_c8qq6"), SubResource("Resource_nx0j6"), SubResource("Resource_7urmc"), SubResource("Resource_gvoi5"), SubResource("Resource_gw2og"), SubResource("Resource_fuedq"), SubResource("Resource_dst7m"), SubResource("Resource_rq8kv"), SubResource("Resource_13inq"), SubResource("Resource_qo6i3"), SubResource("Resource_hs43j"), SubResource("Resource_hb4sr"), SubResource("Resource_82321"), SubResource("Resource_he60i"), SubResource("Resource_pbcl8"), SubResource("Resource_uv12l"), SubResource("Resource_3u6de")])
+metadata/_custom_type_script = "uid://cq8x3unfkqgsx"

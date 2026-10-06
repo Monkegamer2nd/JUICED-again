@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://bw2uj4dse4ay1"]
+
+[ext_resource type="Script" uid="uid://vwwdj68c3nl6" path="res://Scripts/local/start_screen.gd" id="1_5e717"]
+[ext_resource type="PackedScene" uid="uid://bnh7472d6pr8e" path="res://Prefabs/clouds.tscn" id="2_mtlf8"]
+[ext_resource type="Texture2D" uid="uid://qqr3low375et" path="res://Sprites/Background/START_Menu.png" id="3_nqnrp"]
+[ext_resource type="Texture2D" uid="uid://s3f4l1locy1r" path="res://Sprites/Misc/JUICED (1).png" id="4_5a7ho"]
+[ext_resource type="Texture2D" uid="uid://cbhecxgctvv7k" path="res://Sprites/Misc/again.png" id="5_mtlf8"]
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_5e717")
+
+[node name="Sky" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 649.0
+color = Color(0.633323, 1, 0.970763, 1)
+
+[node name="Clouds" parent="." instance=ExtResource("2_mtlf8")]
+
+[node name="BackGround" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_nqnrp")
+
+[node name="Start_Button" type="Button" parent="."]
+offset_left = 769.0
+offset_top = 199.0
+offset_right = 1090.0
+offset_bottom = 230.0
+text = "Start"
+
+[node name="Options" type="Button" parent="."]
+offset_left = 767.0
+offset_top = 244.0
+offset_right = 1088.0
+offset_bottom = 275.0
+text = "Options"
+
+[node name="Quit Button" type="Button" parent="."]
+offset_left = 767.0
+offset_top = 288.0
+offset_right = 1088.0
+offset_bottom = 319.0
+text = "Quit"
+
+[node name="Again" type="Sprite2D" parent="."]
+position = Vector2(1038, 444)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_mtlf8")
+
+[node name="Juiced(1)" type="Sprite2D" parent="."]
+position = Vector2(913, 379)
+scale = Vector2(0.462054, 0.459821)
+texture = ExtResource("4_5a7ho")
+
+[connection signal="pressed" from="Start_Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Quit Button" to="." method="_on_quit_button_pressed"]

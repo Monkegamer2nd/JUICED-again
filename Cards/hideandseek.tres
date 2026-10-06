@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CARD_DATA" load_steps=5 format=3 uid="uid://c2wmjcw4scu04"]
+
+[ext_resource type="Texture2D" uid="uid://6cmirrqsbkbj" path="res://Sprites/Cards/HideAndSeek.png" id="1_b5ycv"]
+[ext_resource type="Script" uid="uid://8jm0p3xpvb65" path="res://Custom Resources/die_information.gd" id="2_g7xot"]
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="3_7o8jn"]
+
+[sub_resource type="Resource" id="Resource_nnbw0"]
+script = ExtResource("2_g7xot")
+type = 4
+min_roll = 1
+max_roll = 4
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[resource]
+script = ExtResource("3_7o8jn")
+id = "Hide and Seek"
+energy_cost = 0
+target = 0
+card_art = ExtResource("1_b5ycv")
+dice_list = Array[ExtResource("2_g7xot")]([SubResource("Resource_nnbw0")])
+metadata/_custom_type_script = "uid://ufsrn7110jdc"

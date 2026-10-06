@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://jr1f264k28ya"]
+
+[ext_resource type="Script" uid="uid://df7trclyqpa8l" path="res://Scripts/local/dice.gd" id="1_vodvc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m1o2d"]
+load_path = "res://.godot/imported/Block.png-78298448f3500b1f944841cb5abd2cfc.ctex"
+
+[node name="Dice" type="Control"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1120.0
+offset_bottom = -616.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_vodvc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_m1o2d")

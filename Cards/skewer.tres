@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CARD_DATA" load_steps=7 format=3 uid="uid://t16blunba8ok"]
+
+[ext_resource type="Texture2D" uid="uid://cjrtgmf8f1o5v" path="res://Sprites/Cards/Skewer.png" id="1_ruuiw"]
+[ext_resource type="Script" uid="uid://8jm0p3xpvb65" path="res://Custom Resources/die_information.gd" id="2_84oen"]
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="3_dophx"]
+
+[sub_resource type="Resource" id="Resource_ktrw1"]
+script = ExtResource("2_84oen")
+type = 1
+min_roll = 1
+max_roll = 3
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[sub_resource type="Resource" id="Resource_akbfu"]
+script = ExtResource("2_84oen")
+type = 1
+min_roll = 1
+max_roll = 3
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[sub_resource type="Resource" id="Resource_yfr1a"]
+script = ExtResource("2_84oen")
+type = 1
+min_roll = 1
+max_roll = 3
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[resource]
+script = ExtResource("3_dophx")
+id = "Skewer"
+energy_cost = 1
+target = 0
+card_art = ExtResource("1_ruuiw")
+dice_list = Array[ExtResource("2_84oen")]([SubResource("Resource_ktrw1"), SubResource("Resource_akbfu"), SubResource("Resource_yfr1a")])
+metadata/_custom_type_script = "uid://ufsrn7110jdc"

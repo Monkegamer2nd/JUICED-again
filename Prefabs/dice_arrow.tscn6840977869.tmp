@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0eaqujb7ele"]
+
+[ext_resource type="Script" uid="uid://ns63vtqnm72p" path="res://Scripts/local/dice_arrow.gd" id="1_f0f4v"]
+[ext_resource type="PackedScene" uid="uid://csajkbcynkvko" path="res://Prefabs/dice_arc.tscn" id="2_f0f4v"]
+
+[node name="dice_arrow" type="Node2D"]
+script = ExtResource("1_f0f4v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Dice_arc" parent="CanvasLayer" instance=ExtResource("2_f0f4v")]

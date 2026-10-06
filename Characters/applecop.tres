@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CHARACTERS" load_steps=8 format=3 uid="uid://cwlby55rrq7q4"]
+
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="1_tt3f2"]
+[ext_resource type="Resource" uid="uid://cfd5ikpcouj2v" path="res://Cards/stronghold.tres" id="2_0gh1h"]
+[ext_resource type="Resource" uid="uid://b2f045mbl2p8j" path="res://Cards/swift_movements.tres" id="3_3pis5"]
+[ext_resource type="Resource" uid="uid://cuhyfhv0ffdxr" path="res://Cards/police_brutality.tres" id="4_gsej3"]
+[ext_resource type="Resource" uid="uid://bimwwmc13agxf" path="res://Cards/clean_cut.tres" id="5_ng766"]
+[ext_resource type="Texture2D" uid="uid://bqyfm4gp8egpb" path="res://Sprites/Rewards/Apple.png" id="6_whdt6"]
+[ext_resource type="Script" uid="uid://cwjxr1sdytj2j" path="res://Custom Resources/character_stats.gd" id="7_3dpcq"]
+
+[resource]
+script = ExtResource("7_3dpcq")
+id = "Apple Cop"
+max_health = 30
+max_stagger = 10
+max_energy = 4
+slash_resistance = 1
+blunt_resistance = 1
+pierce_resistance = 2
+fruit_art = ExtResource("6_whdt6")
+card_deck = Array[ExtResource("1_tt3f2")]([ExtResource("2_0gh1h"), ExtResource("2_0gh1h"), ExtResource("2_0gh1h"), ExtResource("3_3pis5"), ExtResource("3_3pis5"), ExtResource("3_3pis5"), ExtResource("4_gsej3"), ExtResource("4_gsej3"), ExtResource("5_ng766")])
+speed_dice_amount = 1
+min_speed_roll = 1
+max_speed_roll = 3
+metadata/_custom_type_script = "uid://cwjxr1sdytj2j"

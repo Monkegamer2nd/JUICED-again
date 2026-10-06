@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CARD_DATA" load_steps=6 format=3 uid="uid://tc35cacymt3m"]
+
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="1_2wl1q"]
+[ext_resource type="Texture2D" uid="uid://783b4v3kne7r" path="res://Sprites/Cards/BasicAttack.png" id="1_eku58"]
+[ext_resource type="Script" uid="uid://8jm0p3xpvb65" path="res://Custom Resources/die_information.gd" id="2_t43cs"]
+
+[sub_resource type="Resource" id="Resource_irtdk"]
+script = ExtResource("2_t43cs")
+type = 0
+min_roll = 1
+max_roll = 3
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[sub_resource type="Resource" id="Resource_usdkb"]
+script = ExtResource("2_t43cs")
+type = 1
+min_roll = 2
+max_roll = 4
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[resource]
+script = ExtResource("1_2wl1q")
+id = "Basic Attack"
+energy_cost = 1
+target = 0
+card_art = ExtResource("1_eku58")
+dice_list = Array[ExtResource("2_t43cs")]([SubResource("Resource_irtdk"), SubResource("Resource_usdkb")])
+metadata/_custom_type_script = "uid://ufsrn7110jdc"

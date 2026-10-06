@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3l2oegd40mhv"]
+
+[ext_resource type="Texture2D" uid="uid://783b4v3kne7r" path="res://Sprites/Cards/BasicAttack.png" id="1_x2xax"]
+[ext_resource type="Script" uid="uid://dsfupue0jkho6" path="res://Scripts/local/deck_card.gd" id="2_x2xax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73rh8"]
+size = Vector2(130, 186)
+
+[node name="DeckCard" type="TextureRect"]
+custom_minimum_size = Vector2(129, 186)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_x2xax")
+expand_mode = 1
+script = ExtResource("2_x2xax")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(65, 93)
+shape = SubResource("RectangleShape2D_73rh8")
+
+[node name="Move_Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.286822
+anchor_top = 0.0107527
+anchor_right = 0.697674
+anchor_bottom = 0.0107527
+offset_right = 59.0
+offset_bottom = 28.0
+scale = Vector2(0.75, 0.75)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 15
+text = " HEAVY ATTACK"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Card_Cost" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 2.0
+offset_right = 26.0
+offset_bottom = 24.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 15
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dice_Container" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 3.0
+offset_top = 146.0
+offset_right = 124.0
+offset_bottom = 178.0
+mouse_filter = 2
+theme_override_constants/separation = 5

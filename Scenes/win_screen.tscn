@@ -1,0 +1,188 @@
+[gd_scene load_steps=14 format=3 uid="uid://dvoqdcg3uffj7"]
+
+[ext_resource type="Script" uid="uid://dwdqi21ibgngf" path="res://Scripts/local/win_screen.gd" id="1_l5sol"]
+[ext_resource type="Texture2D" uid="uid://bcco8ywctduy" path="res://Sprites/Background/WinScreen.png" id="2_a00f1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awi1s"]
+atlas = ExtResource("2_a00f1")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwc64"]
+atlas = ExtResource("2_a00f1")
+region = Rect2(0, 648, 1152, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_85imr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awi1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwc64")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_j0aiw"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l5sol"]
+gradient = SubResource("Gradient_j0aiw")
+width = 8
+height = 8
+
+[sub_resource type="Curve" id="Curve_a00f1"]
+_data = [Vector2(0.0208333, 1), 0.0, -0.0526169, 0, 0, Vector2(0.848958, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_awi1s"]
+curve = SubResource("Curve_a00f1")
+
+[sub_resource type="Gradient" id="Gradient_bwc64"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.566265)
+colors = PackedColorArray(0.253965, 0.997411, 1, 1, 1, 0, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_85imr"]
+gradient = SubResource("Gradient_bwc64")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mf36t"]
+particle_flag_disable_z = true
+angle_min = 1.07288e-05
+angle_max = 360.0
+direction = Vector3(1, -1, 0)
+spread = 40.0
+initial_velocity_min = 700.0
+initial_velocity_max = 900.0
+angular_velocity_min = 100.0
+angular_velocity_max = 150.0
+gravity = Vector3(0, 200, 10)
+scale_min = 0.5
+color_initial_ramp = SubResource("GradientTexture1D_85imr")
+alpha_curve = SubResource("CurveTexture_awi1s")
+turbulence_enabled = true
+turbulence_noise_strength = 0.5
+turbulence_noise_scale = 1.5
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pq638"]
+particle_flag_disable_z = true
+angle_min = 1.07288e-05
+angle_max = 360.0
+direction = Vector3(-1, -1, 0)
+spread = 40.0
+initial_velocity_min = 700.0
+initial_velocity_max = 900.0
+angular_velocity_min = 100.0
+angular_velocity_max = 150.0
+gravity = Vector3(0, 200, 10)
+scale_min = 0.5
+color_initial_ramp = SubResource("GradientTexture1D_85imr")
+alpha_curve = SubResource("CurveTexture_awi1s")
+turbulence_enabled = true
+turbulence_noise_strength = 0.5
+turbulence_noise_scale = 1.5
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l5sol")
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 324)
+sprite_frames = SubResource("SpriteFrames_85imr")
+autoplay = "default"
+frame_progress = 0.651924
+
+[node name="ConfettiManager" type="Node2D" parent="."]
+
+[node name="LeftConfetti" type="GPUParticles2D" parent="ConfettiManager"]
+position = Vector2(0, 202)
+amount = 125
+texture = SubResource("GradientTexture2D_l5sol")
+lifetime = 10.0
+explosiveness = 0.2
+process_material = SubResource("ParticleProcessMaterial_mf36t")
+
+[node name="RightConfetti" type="GPUParticles2D" parent="ConfettiManager"]
+position = Vector2(1152, 211)
+amount = 125
+texture = SubResource("GradientTexture2D_l5sol")
+lifetime = 10.0
+explosiveness = 0.2
+process_material = SubResource("ParticleProcessMaterial_pq638")
+
+[node name="VICTORY" type="Label" parent="."]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 120.0
+offset_right = 772.0
+offset_bottom = 257.0
+theme_override_font_sizes/font_size = 100
+text = "VICTORY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 270.0
+offset_right = 470.0
+offset_bottom = 482.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Continue" type="Button" parent="."]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 301.0
+offset_right = 816.0
+offset_bottom = 353.0
+theme_override_font_sizes/font_size = 25
+text = "Continue"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 372.0
+offset_right = 817.0
+offset_bottom = 424.0
+theme_override_font_sizes/font_size = 25
+text = "Quit"
+
+[node name="Nothing" type="Label" parent="."]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 329.0
+offset_right = 389.0
+offset_bottom = 413.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "Nothing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 210.0
+offset_right = 323.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "Rewards"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

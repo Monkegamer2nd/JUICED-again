@@ -1,0 +1,139 @@
+[gd_resource type="Resource" script_class="CutsceneData" load_steps=24 format=3 uid="uid://dpuxkfp5vo4ht"]
+
+[ext_resource type="Script" uid="uid://bhvt02xh3pqmd" path="res://Custom Resources/cutscenecommand.gd" id="1_xr3kj"]
+[ext_resource type="Script" uid="uid://cq8x3unfkqgsx" path="res://Custom Resources/cutscene_information.gd" id="2_n88af"]
+[ext_resource type="Script" uid="uid://sxj1qy335rq2" path="res://Custom Resources/cmdbackground.gd" id="2_s2st2"]
+[ext_resource type="Texture2D" uid="uid://dto15bxqkseaw" path="res://Sprites/Background/PrisonBackground.png" id="3_02cw3"]
+[ext_resource type="Script" uid="uid://bdv8hwcesqfca" path="res://Custom Resources/cmddialogue.gd" id="4_gvkcx"]
+[ext_resource type="Texture2D" uid="uid://cne8jh4l0lb3n" path="res://Sprites/Characters/JohnJuiced (1).png" id="5_gvkcx"]
+[ext_resource type="Texture2D" uid="uid://cx6kjtaa4ss5e" path="res://Sprites/Characters/AppleCop (2).png" id="6_gvkcx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttfc2"]
+atlas = ExtResource("3_02cw3")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="Resource" id="Resource_e7043"]
+script = ExtResource("2_s2st2")
+sheet_path = SubResource("AtlasTexture_ttfc2")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://sxj1qy335rq2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7043"]
+atlas = ExtResource("5_gvkcx")
+region = Rect2(700, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_c7o8q"]
+script = ExtResource("4_gvkcx")
+speaker = "John Juiced"
+position = "left"
+text = "Hmm... Welll... I'm pretty sure that, according to the map in my mind the elevator should be this way."
+sheet_path = SubResource("AtlasTexture_e7043")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7o8q"]
+atlas = ExtResource("6_gvkcx")
+region = Rect2(-75, 0, 300, 350)
+
+[sub_resource type="Resource" id="Resource_aqtrf"]
+script = ExtResource("4_gvkcx")
+speaker = "???"
+position = "right"
+text = "..."
+sheet_path = SubResource("AtlasTexture_c7o8q")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n32sc"]
+atlas = ExtResource("5_gvkcx")
+region = Rect2(350, 900, 350, 300)
+
+[sub_resource type="Resource" id="Resource_86plp"]
+script = ExtResource("4_gvkcx")
+speaker = "John Juiced"
+position = "left"
+text = "WOAH!"
+sheet_path = SubResource("AtlasTexture_n32sc")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3det"]
+atlas = ExtResource("5_gvkcx")
+region = Rect2(700, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_hp8db"]
+script = ExtResource("4_gvkcx")
+speaker = "John Juiced"
+position = "left"
+text = "Uhh.... Hey Officer... You're like a huge wall of muscle... Do you have muscles? Or would that just be apple... Flesh?"
+sheet_path = SubResource("AtlasTexture_r3det")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvkcx"]
+atlas = ExtResource("5_gvkcx")
+region = Rect2(350, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_ttfc2"]
+script = ExtResource("4_gvkcx")
+speaker = "John Juiced"
+position = "left"
+text = "..."
+sheet_path = SubResource("AtlasTexture_gvkcx")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08sxo"]
+atlas = ExtResource("5_gvkcx")
+region = Rect2(350, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_3u1mi"]
+script = ExtResource("4_gvkcx")
+speaker = "John Juiced"
+position = "left"
+text = "... Not much of a talker, are you?"
+sheet_path = SubResource("AtlasTexture_08sxo")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooay2"]
+atlas = ExtResource("5_gvkcx")
+region = Rect2(1050, 900, 350, 300)
+
+[sub_resource type="Resource" id="Resource_2h6go"]
+script = ExtResource("4_gvkcx")
+speaker = "John Juiced"
+position = "left"
+text = "Okay, well I'm assuming you won't let me pass without a fight. So let's go."
+sheet_path = SubResource("AtlasTexture_ooay2")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[resource]
+script = ExtResource("2_n88af")
+commands = Array[ExtResource("1_xr3kj")]([SubResource("Resource_e7043"), SubResource("Resource_c7o8q"), SubResource("Resource_aqtrf"), SubResource("Resource_86plp"), SubResource("Resource_hp8db"), SubResource("Resource_ttfc2"), SubResource("Resource_3u1mi"), SubResource("Resource_2h6go")])
+metadata/_custom_type_script = "uid://cq8x3unfkqgsx"

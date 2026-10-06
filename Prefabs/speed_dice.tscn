@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmaarjw761f2e"]
+
+[ext_resource type="Script" uid="uid://cjr5qu72hiexj" path="res://Scripts/local/speed_dice.gd" id="1_i68fs"]
+[ext_resource type="Texture2D" uid="uid://dy7r06wihawyl" path="res://Sprites/Dice/Blank.png" id="2_i68fs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i68fs"]
+size = Vector2(45, 45)
+
+[node name="Speed_dice" type="Control"]
+z_as_relative = false
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -23.0
+offset_right = -1130.0
+offset_bottom = -626.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(23, 23)
+mouse_filter = 2
+script = ExtResource("1_i68fs")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 48.0
+offset_bottom = 48.0
+pivot_offset = Vector2(24, 24)
+mouse_filter = 2
+color = Color(0, 0.957132, 0.957132, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.513
+anchor_right = 0.5
+anchor_bottom = 0.513
+offset_left = -31.5
+offset_top = -32.085
+offset_right = 32.5
+offset_bottom = 31.915
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(32, 32)
+mouse_filter = 2
+texture = ExtResource("2_i68fs")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 45.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hover_area" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hover_area"]
+position = Vector2(23, 23)
+shape = SubResource("RectangleShape2D_i68fs")
+
+[connection signal="mouse_entered" from="Hover_area" to="." method="_on_hover_area_mouse_entered"]
+[connection signal="mouse_exited" from="Hover_area" to="." method="_on_hover_area_mouse_exited"]

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CARD_DATA" load_steps=6 format=3 uid="uid://dea15sw8mqwyq"]
+
+[ext_resource type="Texture2D" uid="uid://brhte0f0n22us" path="res://Sprites/Cards/JingleBells.png" id="1_xcjth"]
+[ext_resource type="Script" uid="uid://8jm0p3xpvb65" path="res://Custom Resources/die_information.gd" id="2_lof72"]
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="3_q4f8l"]
+
+[sub_resource type="Resource" id="Resource_c0vle"]
+script = ExtResource("2_lof72")
+type = 0
+min_roll = 2
+max_roll = 5
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[sub_resource type="Resource" id="Resource_oh6bm"]
+script = ExtResource("2_lof72")
+type = 0
+min_roll = 1
+max_roll = 3
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[resource]
+script = ExtResource("3_q4f8l")
+id = "Jingle Bells"
+energy_cost = 3
+target = 0
+card_art = ExtResource("1_xcjth")
+dice_list = Array[ExtResource("2_lof72")]([SubResource("Resource_c0vle"), SubResource("Resource_oh6bm")])
+metadata/_custom_type_script = "uid://ufsrn7110jdc"

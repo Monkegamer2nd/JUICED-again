@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CARD_DATA" load_steps=6 format=3 uid="uid://b2ju5e75i4uvs"]
+
+[ext_resource type="Texture2D" uid="uid://dfgky0ur0p7v1" path="res://Sprites/Cards/Peek-a-Boo.png" id="1_3kols"]
+[ext_resource type="Script" uid="uid://8jm0p3xpvb65" path="res://Custom Resources/die_information.gd" id="2_ohrfa"]
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="3_j3fsq"]
+
+[sub_resource type="Resource" id="Resource_nf81s"]
+script = ExtResource("2_ohrfa")
+type = 3
+min_roll = 1
+max_roll = 6
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[sub_resource type="Resource" id="Resource_mfmpo"]
+script = ExtResource("2_ohrfa")
+type = 2
+min_roll = 1
+max_roll = 2
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[resource]
+script = ExtResource("3_j3fsq")
+id = "Peek-a-Boo"
+energy_cost = 2
+target = 0
+card_art = ExtResource("1_3kols")
+dice_list = Array[ExtResource("2_ohrfa")]([SubResource("Resource_nf81s"), SubResource("Resource_mfmpo")])
+metadata/_custom_type_script = "uid://ufsrn7110jdc"

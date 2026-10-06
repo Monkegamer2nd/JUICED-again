@@ -1,0 +1,155 @@
+[gd_resource type="Resource" script_class="CutsceneData" load_steps=26 format=3 uid="uid://chmha12uihuap"]
+
+[ext_resource type="Script" uid="uid://bhvt02xh3pqmd" path="res://Custom Resources/cutscenecommand.gd" id="1_0xx5b"]
+[ext_resource type="Script" uid="uid://sxj1qy335rq2" path="res://Custom Resources/cmdbackground.gd" id="2_8p1wn"]
+[ext_resource type="Texture2D" uid="uid://dto15bxqkseaw" path="res://Sprites/Background/PrisonBackground.png" id="3_q1u2m"]
+[ext_resource type="Script" uid="uid://bdv8hwcesqfca" path="res://Custom Resources/cmddialogue.gd" id="4_qw1p8"]
+[ext_resource type="Texture2D" uid="uid://l7v38by5pde7" path="res://Sprites/Characters/OddTodd (3).png" id="5_g23pp"]
+[ext_resource type="Texture2D" uid="uid://cne8jh4l0lb3n" path="res://Sprites/Characters/JohnJuiced (1).png" id="6_ry02l"]
+[ext_resource type="Script" uid="uid://cq8x3unfkqgsx" path="res://Custom Resources/cutscene_information.gd" id="7_yjxtc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8aw0p"]
+atlas = ExtResource("3_q1u2m")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="Resource" id="Resource_7qk3o"]
+script = ExtResource("2_8p1wn")
+sheet_path = SubResource("AtlasTexture_8aw0p")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://sxj1qy335rq2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xx5b"]
+atlas = ExtResource("6_ry02l")
+region = Rect2(700, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_8p1wn"]
+script = ExtResource("4_qw1p8")
+speaker = "John Juiced"
+position = "left"
+text = "Did I do that right?"
+sheet_path = SubResource("AtlasTexture_0xx5b")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vdyy"]
+atlas = ExtResource("5_g23pp")
+region = Rect2(0, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_ao5wv"]
+script = ExtResource("4_qw1p8")
+speaker = "Odd Todd"
+position = "right"
+text = "Good... Very good... Here have some of these eggs of mine."
+sheet_path = SubResource("AtlasTexture_1vdyy")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3r60"]
+atlas = ExtResource("6_ry02l")
+region = Rect2(350, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_terw6"]
+script = ExtResource("4_qw1p8")
+speaker = "John Juiced"
+position = "left"
+text = "... Uhhh, what? What do I do with these? I don't really like eggs."
+sheet_path = SubResource("AtlasTexture_v3r60")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mavth"]
+atlas = ExtResource("5_g23pp")
+region = Rect2(350, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_ou7lp"]
+script = ExtResource("4_qw1p8")
+speaker = "Odd Todd"
+position = "right"
+text = "They're not for eating. You bring them to the Juicing Machine, each floor has one. It's quite simple, once you bring an item lended from a person you defeated, you juice it for the person's cards, though you can only get ONE card per reward, so do not expect to get every card in the deck."
+sheet_path = SubResource("AtlasTexture_mavth")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qs5l5"]
+atlas = ExtResource("5_g23pp")
+region = Rect2(350, 300, 350, 300)
+
+[sub_resource type="Resource" id="Resource_8jw87"]
+script = ExtResource("4_qw1p8")
+speaker = "Odd Todd"
+position = "right"
+text = "And once you've gathered your cards, in your deck all you need to do is right click on your deck to remove a card, and left click on your inventory to add to your deck."
+sheet_path = SubResource("AtlasTexture_qs5l5")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkwxq"]
+atlas = ExtResource("6_ry02l")
+region = Rect2(0, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_33rp3"]
+script = ExtResource("4_qw1p8")
+speaker = "John Juiced"
+position = "left"
+text = "Neat. But what do I do if my opponent doesn't give me any reward"
+sheet_path = SubResource("AtlasTexture_pkwxq")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cxrs"]
+atlas = ExtResource("5_g23pp")
+region = Rect2(0, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_n6f78"]
+script = ExtResource("4_qw1p8")
+speaker = "Odd Todd"
+position = "right"
+text = "You juiceTHEM"
+sheet_path = SubResource("AtlasTexture_4cxrs")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cyy0"]
+atlas = ExtResource("6_ry02l")
+region = Rect2(700, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_t0o8p"]
+script = ExtResource("4_qw1p8")
+speaker = "John Juiced"
+position = "left"
+text = "Uhhh... Okay...? Whatever that means. Cya."
+sheet_path = SubResource("AtlasTexture_2cyy0")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[resource]
+script = ExtResource("7_yjxtc")
+commands = Array[ExtResource("1_0xx5b")]([SubResource("Resource_7qk3o"), SubResource("Resource_8p1wn"), SubResource("Resource_ao5wv"), SubResource("Resource_terw6"), SubResource("Resource_ou7lp"), SubResource("Resource_8jw87"), SubResource("Resource_33rp3"), SubResource("Resource_n6f78"), SubResource("Resource_t0o8p")])
+metadata/_custom_type_script = "uid://cq8x3unfkqgsx"

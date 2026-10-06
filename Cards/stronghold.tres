@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CARD_DATA" load_steps=7 format=3 uid="uid://cfd5ikpcouj2v"]
+
+[ext_resource type="Texture2D" uid="uid://dgelf6rhyy8m0" path="res://Sprites/Cards/Stronghold.png" id="1_us1b8"]
+[ext_resource type="Script" uid="uid://8jm0p3xpvb65" path="res://Custom Resources/die_information.gd" id="2_v860k"]
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="3_2d62e"]
+
+[sub_resource type="Resource" id="Resource_wn4k0"]
+script = ExtResource("2_v860k")
+type = 3
+min_roll = 2
+max_roll = 2
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[sub_resource type="Resource" id="Resource_2qbn1"]
+script = ExtResource("2_v860k")
+type = 3
+min_roll = 2
+max_roll = 3
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[sub_resource type="Resource" id="Resource_ifs1a"]
+script = ExtResource("2_v860k")
+type = 4
+min_roll = 3
+max_roll = 3
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[resource]
+script = ExtResource("3_2d62e")
+id = "Stronghold"
+energy_cost = 0
+target = 0
+card_art = ExtResource("1_us1b8")
+dice_list = Array[ExtResource("2_v860k")]([SubResource("Resource_wn4k0"), SubResource("Resource_2qbn1"), SubResource("Resource_ifs1a")])
+metadata/_custom_type_script = "uid://ufsrn7110jdc"

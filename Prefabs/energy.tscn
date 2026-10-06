@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxdf8vlci0wnf"]
+
+[ext_resource type="Texture2D" uid="uid://bg64llw8xqynj" path="res://Sprites/Misc/Energy.png" id="1_ixxd6"]
+[ext_resource type="Script" uid="uid://dciutx2bj8365" path="res://Scripts/local/energy.gd" id="1_ksow3"]
+
+[node name="Energy" type="Control"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(21.333, 21.333)
+script = ExtResource("1_ksow3")
+
+[node name="EnergySprite" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("1_ixxd6")
+expand_mode = 1

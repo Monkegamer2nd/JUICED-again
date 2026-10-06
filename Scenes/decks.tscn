@@ -1,0 +1,177 @@
+[gd_scene load_steps=5 format=3 uid="uid://yqv12eyebcky"]
+
+[ext_resource type="Script" uid="uid://bdwh7w4mdli7j" path="res://Scripts/local/teams.gd" id="1_2xroo"]
+[ext_resource type="Texture2D" uid="uid://cra6pmjuomm77" path="res://Sprites/Background/DeckBackGround (1).png" id="2_87pi0"]
+[ext_resource type="Texture2D" uid="uid://dnkii3phlewns" path="res://Sprites/Characters/Portrait.png" id="2_buh3x"]
+[ext_resource type="PackedScene" uid="uid://5wot5ifi785i" path="res://Prefabs/card_display.tscn" id="3_s2pjn"]
+
+[node name="Decks" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2xroo")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -4096
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_87pi0")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_right = 73.0
+offset_bottom = 31.0
+text = "Back"
+
+[node name="DeckContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(296.25, 424.5)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 81.0
+offset_right = 298.25
+offset_bottom = 505.5
+columns = 3
+
+[node name="DeckTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 151.0
+offset_bottom = 77.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 20
+text = "Your Deck"
+
+[node name="CharacterSheet" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 782.0
+offset_top = 396.0
+offset_right = 1256.0
+offset_bottom = 913.0
+mouse_filter = 2
+
+[node name="Outline" type="ColorRect" parent="CharacterSheet"]
+layout_mode = 0
+offset_right = 86.0
+offset_bottom = 102.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Outline_Inline" type="ColorRect" parent="CharacterSheet"]
+layout_mode = 0
+offset_right = 81.0
+offset_bottom = 96.0
+mouse_filter = 2
+
+[node name="Portrait" type="TextureRect" parent="CharacterSheet"]
+layout_mode = 0
+offset_left = -4.0
+offset_right = 125.0
+offset_bottom = 128.0
+scale = Vector2(0.726563, 0.75)
+texture = ExtResource("2_buh3x")
+
+[node name="Name" type="Label" parent="CharacterSheet"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 5.0
+offset_right = 335.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "John Doe"
+
+[node name="Health" type="Label" parent="CharacterSheet"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 48.0
+offset_right = 302.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="Stagger" type="Label" parent="CharacterSheet"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 72.0
+offset_right = 303.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="SlashResistance" type="Label" parent="CharacterSheet"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 113.0
+offset_right = 224.0
+offset_bottom = 139.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "RESISTANCE: NORMAL"
+
+[node name="PierceResistance" type="Label" parent="CharacterSheet"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 159.0
+offset_right = 223.0
+offset_bottom = 187.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "PIERCE RESISTANCE INEFFECTVE"
+
+[node name="BluntResistance" type="Label" parent="CharacterSheet"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 206.0
+offset_right = 224.0
+offset_bottom = 234.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "RESISTANCE"
+
+[node name="Outline2" type="ColorRect" parent="CharacterSheet"]
+z_index = -1
+layout_mode = 0
+offset_left = -9.0
+offset_top = -6.0
+offset_right = 441.0
+offset_bottom = 534.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DeckTitle2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 24.0
+offset_right = 733.0
+offset_bottom = 59.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 20
+text = "Card Inventory"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(387, 445.5)
+layout_mode = 0
+offset_left = 334.0
+offset_top = 73.0
+offset_right = 736.0
+offset_bottom = 640.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="CardsDisplay" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = -237.0
+offset_right = 927.0
+offset_bottom = -52.0
+scale = Vector2(1.25, 1.25)
+
+[node name="Card_display" parent="CardsDisplay" instance=ExtResource("3_s2pjn")]
+layout_mode = 2

@@ -1,0 +1,201 @@
+[gd_scene load_steps=23 format=3 uid="uid://cf2w5bd2dhdfi"]
+
+[ext_resource type="Script" uid="uid://cnsehj1b7jqck" path="res://Scripts/local/juicing.gd" id="1_6dixx"]
+[ext_resource type="Texture2D" uid="uid://sfr0c44cfpl2" path="res://Sprites/Bottom_Juicer.png" id="2_l4bmd"]
+[ext_resource type="Texture2D" uid="uid://c01ujr5om3s0o" path="res://Sprites/Top_Juicer.png" id="3_kg7ar"]
+[ext_resource type="Texture2D" uid="uid://cnchjxtcwxgbx" path="res://Sprites/Juicer_Button.png" id="4_i86jd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qwts"]
+atlas = ExtResource("4_i86jd")
+region = Rect2(373, 0, 373, 514)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yc8iy"]
+atlas = ExtResource("4_i86jd")
+region = Rect2(0, 514, 373, 514)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nllee"]
+atlas = ExtResource("4_i86jd")
+region = Rect2(0, 0, 373, 514)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_87j3f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qwts")
+}],
+"loop": true,
+"name": &"hovered",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yc8iy")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nllee")
+}],
+"loop": true,
+"name": &"unhovered",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l4bmd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kg7ar"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i86jd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1vgwi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7qwts"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yc8iy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nllee"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87j3f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yx6qj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k80in"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_crhyv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtjqh"]
+size = Vector2(320, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4bmd"]
+size = Vector2(16, 376)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kg7ar"]
+size = Vector2(12, 376)
+
+[node name="JUICING" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6dixx")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_right = 73.0
+offset_bottom = 31.0
+text = "Back"
+
+[node name="PlayerInventory" type="Label" parent="."]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 30.0
+offset_right = 626.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 20
+text = "Player Invetory"
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 65.0
+offset_right = 770.0
+offset_bottom = 640.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="JuicerBottom" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 793.0
+offset_top = 137.0
+offset_right = 1166.0
+offset_bottom = 651.0
+texture = ExtResource("2_l4bmd")
+
+[node name="JuicerTop" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 781.0
+offset_top = -548.0
+offset_right = 1172.0
+offset_bottom = 182.0
+texture = ExtResource("3_kg7ar")
+
+[node name="Button" type="AnimatedSprite2D" parent="."]
+position = Vector2(967, 443)
+sprite_frames = SubResource("SpriteFrames_87j3f")
+animation = &"unhovered"
+autoplay = "unhovered"
+
+[node name="JUICEButton" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 0
+offset_left = 841.0
+offset_top = 542.0
+offset_right = 1085.0
+offset_bottom = 614.0
+theme_override_colors/font_hover_pressed_color = Color(0.635294, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.635294, 0, 0, 1)
+theme_override_colors/font_color = Color(0.415686, 0.00784314, 0.00784314, 1)
+theme_override_colors/font_focus_color = Color(0.415686, 0.00784314, 0.00784314, 1)
+theme_override_colors/font_pressed_color = Color(0.415686, 0.00784314, 0.00784314, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l4bmd")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_kg7ar")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_i86jd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1vgwi")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_7qwts")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_yc8iy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nllee")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_87j3f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yx6qj")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_k80in")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_crhyv")
+text = "JUICE"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(980, 441)
+
+[node name="Bottom" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-8, 5)
+shape = SubResource("RectangleShape2D_mtjqh")
+
+[node name="Left" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-174, -177)
+shape = SubResource("RectangleShape2D_l4bmd")
+
+[node name="Right" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(153, -181)
+shape = SubResource("RectangleShape2D_kg7ar")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 110.0
+offset_right = 397.0
+offset_bottom = 676.0
+scale = Vector2(0.75, 0.75)
+columns = 3
+
+[node name="Cardfromfruit" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 76.0
+offset_right = 153.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 20
+text = "Cards from the Fruit"
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="JUICEButton" to="." method="_on_juice_button_mouse_entered"]
+[connection signal="mouse_exited" from="JUICEButton" to="." method="_on_juice_button_mouse_exited"]
+[connection signal="pressed" from="JUICEButton" to="." method="_on_juice_button_pressed"]

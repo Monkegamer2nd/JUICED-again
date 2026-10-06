@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://c18llpfa2yhex"]
+
+[ext_resource type="Texture2D" uid="uid://764xfwlichxm" path="res://Sprites/Background/WhiteHouseBackground (1).png" id="1_aqxld"]
+[ext_resource type="Script" uid="uid://dxl70l47mm2o7" path="res://Scripts/local/main_cutscene.gd" id="1_rt7e8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rt7e8"]
+atlas = ExtResource("1_aqxld")
+region = Rect2(0, 0, 0, 648)
+
+[node name="MainCutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rt7e8")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_rt7e8")
+
+[node name="LeftActor" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -76.0
+offset_top = 120.0
+offset_right = 683.0
+offset_bottom = 878.0
+theme_override_constants/separation = -250
+
+[node name="RightActor" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 115.0
+offset_right = 1299.0
+offset_bottom = 873.0
+theme_override_constants/separation = -250
+
+[node name="DialogueBox" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 477.0
+offset_right = 1000.0
+offset_bottom = 646.0
+
+[node name="Dialogue" type="RichTextLabel" parent="DialogueBox"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 17
+text = "HAHAHAHAH I\"VE DONE IT I CAN NOW BAN ALL OF THE FUN JUICE... IN THE WORLD!"
+
+[node name="SpeakerName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 446.0
+offset_right = 431.0
+offset_bottom = 477.0
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 22
+text = "CHANCELLOR TANGERINE"
+
+[node name="SkipButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 985.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 32.0
+text = "Skip"

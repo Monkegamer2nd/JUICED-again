@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CHARACTERS" load_steps=9 format=3 uid="uid://ckqj5e5wlersp"]
+
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="1_5myse"]
+[ext_resource type="Resource" uid="uid://c2wmjcw4scu04" path="res://Cards/hideandseek.tres" id="2_16b7k"]
+[ext_resource type="Resource" uid="uid://tc35cacymt3m" path="res://Cards/basic_attack.tres" id="3_n1akm"]
+[ext_resource type="Resource" uid="uid://t16blunba8ok" path="res://Cards/skewer.tres" id="4_4r87o"]
+[ext_resource type="Resource" uid="uid://b2ju5e75i4uvs" path="res://Cards/peekaboo.tres" id="5_m7yvy"]
+[ext_resource type="Resource" uid="uid://dea15sw8mqwyq" path="res://Cards/jinglebells.tres" id="6_7kvx1"]
+[ext_resource type="Texture2D" uid="uid://bh03ccgwuo470" path="res://Sprites/Rewards/Egg.png" id="7_wl1ya"]
+[ext_resource type="Script" uid="uid://cwjxr1sdytj2j" path="res://Custom Resources/character_stats.gd" id="8_66bs1"]
+
+[resource]
+script = ExtResource("8_66bs1")
+id = "Odd Todd"
+max_health = 15
+max_stagger = 5
+max_energy = 5
+slash_resistance = 2
+blunt_resistance = 1
+pierce_resistance = 1
+fruit_art = ExtResource("7_wl1ya")
+card_deck = Array[ExtResource("1_5myse")]([ExtResource("2_16b7k"), ExtResource("2_16b7k"), ExtResource("2_16b7k"), ExtResource("3_n1akm"), ExtResource("4_4r87o"), ExtResource("5_m7yvy"), ExtResource("5_m7yvy"), ExtResource("5_m7yvy"), ExtResource("6_7kvx1")])
+speed_dice_amount = 1
+min_speed_roll = 2
+max_speed_roll = 4
+metadata/_custom_type_script = "uid://cwjxr1sdytj2j"

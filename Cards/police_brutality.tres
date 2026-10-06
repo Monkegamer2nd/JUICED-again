@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CARD_DATA" load_steps=6 format=3 uid="uid://cuhyfhv0ffdxr"]
+
+[ext_resource type="Texture2D" uid="uid://rkqxhlygyu1g" path="res://Sprites/Cards/PoliceBrutality.png" id="1_wksdx"]
+[ext_resource type="Script" uid="uid://8jm0p3xpvb65" path="res://Custom Resources/die_information.gd" id="2_sgwb0"]
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="3_4bwwb"]
+
+[sub_resource type="Resource" id="Resource_kwdpn"]
+script = ExtResource("2_sgwb0")
+type = 2
+min_roll = 3
+max_roll = 4
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[sub_resource type="Resource" id="Resource_rjwwf"]
+script = ExtResource("2_sgwb0")
+type = 1
+min_roll = 3
+max_roll = 4
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[resource]
+script = ExtResource("3_4bwwb")
+id = "Police Brutality"
+energy_cost = 2
+target = 0
+card_art = ExtResource("1_wksdx")
+dice_list = Array[ExtResource("2_sgwb0")]([SubResource("Resource_kwdpn"), SubResource("Resource_rjwwf")])
+metadata/_custom_type_script = "uid://ufsrn7110jdc"

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://csajkbcynkvko"]
+
+[ext_resource type="Script" uid="uid://b14m4jutfiyn8" path="res://Scripts/local/dice_arc.gd" id="1_ychbm"]
+[ext_resource type="Texture2D" uid="uid://o63uwv1a0jfk" path="res://Sprites/Misc/Arrowhead.png" id="2_c68p8"]
+
+[sub_resource type="Curve" id="Curve_ychbm"]
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Dice_arc" type="Line2D"]
+width = 5.0
+width_curve = SubResource("Curve_ychbm")
+script = ExtResource("1_ychbm")
+
+[node name="ArrowOutline" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_c68p8")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_c68p8")
+
+[node name="ColorRect" type="ColorRect" parent="Arrow"]
+offset_left = -26.0
+offset_top = -4.0
+offset_right = -12.0

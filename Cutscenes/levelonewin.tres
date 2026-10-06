@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="CutsceneData" load_steps=15 format=3 uid="uid://h1fnex7mxgd8"]
+
+[ext_resource type="Script" uid="uid://bhvt02xh3pqmd" path="res://Custom Resources/cutscenecommand.gd" id="1_nc1nj"]
+[ext_resource type="Script" uid="uid://sxj1qy335rq2" path="res://Custom Resources/cmdbackground.gd" id="2_pav0b"]
+[ext_resource type="Script" uid="uid://cq8x3unfkqgsx" path="res://Custom Resources/cutscene_information.gd" id="2_y4poy"]
+[ext_resource type="Texture2D" uid="uid://dto15bxqkseaw" path="res://Sprites/Background/PrisonBackground.png" id="3_hquqq"]
+[ext_resource type="Script" uid="uid://bdv8hwcesqfca" path="res://Custom Resources/cmddialogue.gd" id="4_oh3bj"]
+[ext_resource type="Texture2D" uid="uid://cne8jh4l0lb3n" path="res://Sprites/Characters/JohnJuiced (1).png" id="5_hquqq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2pmr"]
+atlas = ExtResource("3_hquqq")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="Resource" id="Resource_l23hu"]
+script = ExtResource("2_pav0b")
+sheet_path = SubResource("AtlasTexture_u2pmr")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://sxj1qy335rq2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh3bj"]
+atlas = ExtResource("5_hquqq")
+region = Rect2(350, 900, 350, 300)
+
+[sub_resource type="Resource" id="Resource_5xv2d"]
+script = ExtResource("4_oh3bj")
+speaker = "John Juiced"
+position = "left"
+text = "So that's what Odd Todd meant..."
+sheet_path = SubResource("AtlasTexture_oh3bj")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l23hu"]
+atlas = ExtResource("5_hquqq")
+region = Rect2(0, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_cmgwf"]
+script = ExtResource("4_oh3bj")
+speaker = "John Juiced"
+position = "left"
+text = "Oh well, I don't mind getting my hands dirty... I just hope no one asks where I got these APPLES from the APPLE cop"
+sheet_path = SubResource("AtlasTexture_l23hu")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xv2d"]
+atlas = ExtResource("5_hquqq")
+region = Rect2(350, 600, 350, 300)
+
+[sub_resource type="Resource" id="Resource_tll4r"]
+script = ExtResource("4_oh3bj")
+speaker = "John Juiced"
+position = "left"
+text = "His head... I ripped them out of his head. Just felt like I needed to clarify that."
+sheet_path = SubResource("AtlasTexture_5xv2d")
+grid_columns = 1
+grid_rows = 1
+frame_x = 0
+frame_y = 0
+metadata/_custom_type_script = "uid://bdv8hwcesqfca"
+
+[resource]
+script = ExtResource("2_y4poy")
+commands = Array[ExtResource("1_nc1nj")]([SubResource("Resource_l23hu"), SubResource("Resource_5xv2d"), SubResource("Resource_cmgwf"), SubResource("Resource_tll4r")])
+metadata/_custom_type_script = "uid://cq8x3unfkqgsx"

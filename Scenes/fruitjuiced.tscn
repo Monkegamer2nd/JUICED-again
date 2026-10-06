@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvvsxkxd4ks7b"]
+
+[ext_resource type="Script" uid="uid://08jeayh4s8dq" path="res://Scripts/local/fruitjuiced.gd" id="1_qrvi1"]
+[ext_resource type="PackedScene" uid="uid://5wot5ifi785i" path="res://Prefabs/card_display.tscn" id="2_j5m3a"]
+
+[node name="FRUITJUICED" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qrvi1")
+
+[node name="DEFEAT" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 242.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 50
+text = "REWARDS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="Button" parent="."]
+layout_mode = 0
+offset_left = 907.0
+offset_top = 596.0
+offset_right = 1145.0
+offset_bottom = 639.0
+theme_override_font_sizes/font_size = 25
+text = "Continue"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 70.0
+offset_right = 814.0
+offset_bottom = 629.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(774, 559)
+layout_mode = 2
+columns = 6
+
+[node name="CardsDisplay" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 813.0
+offset_top = -237.0
+offset_right = 941.0
+offset_bottom = -52.0
+scale = Vector2(1.25, 1.25)
+
+[node name="Card_display" parent="CardsDisplay" instance=ExtResource("2_j5m3a")]
+layout_mode = 2
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]

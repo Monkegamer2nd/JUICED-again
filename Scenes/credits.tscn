@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://e4pucw4hluqa"]
+
+[ext_resource type="Script" uid="uid://drpa100d38sqo" path="res://Scripts/local/credits.gd" id="1_gryuy"]
+[ext_resource type="Texture2D" uid="uid://dq3vgvwnxuro0" path="res://Sprites/Background/CreditsBackground.png" id="1_r18jl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gryuy"]
+atlas = ExtResource("1_r18jl")
+region = Rect2(0, 0, 1152, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccovl"]
+atlas = ExtResource("1_r18jl")
+region = Rect2(0, 648, 1152, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1bamb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gryuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccovl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gryuy")
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 324)
+sprite_frames = SubResource("SpriteFrames_1bamb")
+autoplay = "default"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_right = 73.0
+offset_bottom = 31.0
+text = "Back"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = -1.0
+offset_right = 615.0
+offset_bottom = 68.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+text = "CREDITS"
+
+[node name="Credits1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 92.0
+offset_right = 403.0
+offset_bottom = 161.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
+text = "All sprites were drawn by me in using Piskel."
+horizontal_alignment = 1
+
+[node name="Credits2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 148.0
+offset_right = 846.0
+offset_bottom = 217.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
+text = "All code was written by me thanks to TONS OF TONS of Godot videos and forms
+(I.E Barry's Dev Hell, and DeveloperEzra.)"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="Credits3" type="Label" parent="."]
+offset_left = 217.0
+offset_top = 296.0
+offset_right = 858.0
+offset_bottom = 428.0
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 25
+text = "Thanks to my friend for most of the sound  effects in my game. However the music and a few other sound effects are from Pixabay"
+horizontal_alignment = 1
+autowrap_mode = 1

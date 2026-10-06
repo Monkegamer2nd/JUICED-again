@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://5wot5ifi785i"]
+
+[ext_resource type="Script" uid="uid://c6tkfi3efvpxl" path="res://Scripts/local/card_display.gd" id="1_0sicc"]
+[ext_resource type="Texture2D" uid="uid://cbifc27yjw3ag" path="res://Sprites/Cards/NoArtCard.png" id="1_jhk7f"]
+[ext_resource type="Texture2D" uid="uid://dk6jyg8x61ggq" path="res://Sprites/Cards/EmptyCard.png" id="3_gskyq"]
+
+[node name="Card_display" type="TextureRect"]
+custom_minimum_size = Vector2(128, 185.6)
+offset_left = -64.0
+offset_top = -93.0
+offset_right = 65.0
+offset_bottom = 93.0
+pivot_offset = Vector2(64, 185)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("1_jhk7f")
+script = ExtResource("1_0sicc")
+metadata/_edit_use_anchors_ = true
+
+[node name="Card_Information" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.50388
+anchor_top = 0.5
+anchor_right = 1.50388
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -93.0
+offset_right = 64.0
+offset_bottom = 93.0
+pivot_offset = Vector2(64, 185)
+mouse_filter = 2
+texture = ExtResource("3_gskyq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Dice_Info_Container" type="VBoxContainer" parent="Card_Information"]
+layout_mode = 0
+offset_top = 11.0
+offset_right = 32.0
+offset_bottom = 185.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Roll_Container" type="VBoxContainer" parent="Card_Information"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 11.0
+offset_right = 69.0
+offset_bottom = 186.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Move_Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.294085
+anchor_top = 0.0325161
+anchor_right = 0.704938
+anchor_bottom = 0.0325161
+offset_left = 0.0629883
+offset_top = -0.0479999
+offset_right = 59.063
+offset_bottom = 27.952
+scale = Vector2(0.75, 0.75)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 15
+text = " HEAVY ATTACK"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Card_Cost" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00775194
+anchor_top = 0.0215054
+anchor_right = 0.00775194
+anchor_bottom = 0.0215054
+offset_left = 4.0
+offset_right = 29.0
+offset_bottom = 23.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 15
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dice_Container" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 146.0
+offset_right = 125.0
+offset_bottom = 178.0
+mouse_filter = 2
+theme_override_constants/separation = 5
+metadata/_edit_use_anchors_ = true

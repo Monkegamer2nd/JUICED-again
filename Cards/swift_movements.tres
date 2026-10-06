@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CARD_DATA" load_steps=6 format=3 uid="uid://b2f045mbl2p8j"]
+
+[ext_resource type="Texture2D" uid="uid://b30yhlfrw2cfp" path="res://Sprites/Cards/SwiftMovements.png" id="1_74gfv"]
+[ext_resource type="Script" uid="uid://8jm0p3xpvb65" path="res://Custom Resources/die_information.gd" id="2_xa7n8"]
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="3_4gsre"]
+
+[sub_resource type="Resource" id="Resource_nhyu8"]
+script = ExtResource("2_xa7n8")
+type = 4
+min_roll = 2
+max_roll = 4
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[sub_resource type="Resource" id="Resource_okyl5"]
+script = ExtResource("2_xa7n8")
+type = 1
+min_roll = 2
+max_roll = 4
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[resource]
+script = ExtResource("3_4gsre")
+id = "Swift Movements"
+energy_cost = 1
+target = 0
+card_art = ExtResource("1_74gfv")
+dice_list = Array[ExtResource("2_xa7n8")]([SubResource("Resource_nhyu8"), SubResource("Resource_okyl5")])
+metadata/_custom_type_script = "uid://ufsrn7110jdc"

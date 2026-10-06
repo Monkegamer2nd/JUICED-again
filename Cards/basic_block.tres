@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CARD_DATA" load_steps=5 format=3 uid="uid://vtvom3112htk"]
+
+[ext_resource type="Script" uid="uid://ufsrn7110jdc" path="res://Custom Resources/card_information.gd" id="1_1eu88"]
+[ext_resource type="Texture2D" uid="uid://bdswjtt5u3jkc" path="res://Sprites/Cards/BasicBlock.png" id="1_ugkq3"]
+[ext_resource type="Script" uid="uid://8jm0p3xpvb65" path="res://Custom Resources/die_information.gd" id="2_d6fgb"]
+
+[sub_resource type="Resource" id="Resource_fymxr"]
+script = ExtResource("2_d6fgb")
+type = 3
+min_roll = 1
+max_roll = 5
+metadata/_custom_type_script = "uid://8jm0p3xpvb65"
+
+[resource]
+script = ExtResource("1_1eu88")
+id = "Basic Block"
+energy_cost = 0
+target = 0
+card_art = ExtResource("1_ugkq3")
+dice_list = Array[ExtResource("2_d6fgb")]([SubResource("Resource_fymxr")])
+metadata/_custom_type_script = "uid://ufsrn7110jdc"

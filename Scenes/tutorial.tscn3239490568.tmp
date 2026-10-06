@@ -1,0 +1,315 @@
+[gd_scene load_steps=27 format=3 uid="uid://djfunupqnh8vo"]
+
+[ext_resource type="PackedScene" uid="uid://c0eaqujb7ele" path="res://Prefabs/dice_arrow.tscn" id="1_jb51l"]
+[ext_resource type="Script" uid="uid://cnqoghoxoajlv" path="res://Scripts/local/camera_2d.gd" id="2_dxsep"]
+[ext_resource type="Script" uid="uid://cewhebqjjxkdh" path="res://Scripts/local/ui_manager.gd" id="3_lexqi"]
+[ext_resource type="Script" uid="uid://cx0k0pd1hrifv" path="res://Scripts/local/battle_manager.gd" id="4_pkgwa"]
+[ext_resource type="Script" uid="uid://duole3p6hfl4w" path="res://Scripts/local/card_manager.gd" id="5_radxo"]
+[ext_resource type="PackedScene" uid="uid://b6e31chusmpgu" path="res://Prefabs/card_target_selector.tscn" id="6_1cu4j"]
+[ext_resource type="Script" uid="uid://b8hsf2204paqn" path="res://Scripts/local/card_generator.gd" id="7_djl3p"]
+[ext_resource type="Script" uid="uid://ca8iu8jn72h3" path="res://Scripts/local/input_manager.gd" id="8_73805"]
+[ext_resource type="Script" uid="uid://c66vjpqgrwa6b" path="res://Scripts/local/hand.gd" id="9_lh8ri"]
+[ext_resource type="PackedScene" uid="uid://bxyg0c5a3655s" path="res://Prefabs/player.tscn" id="11_0upaw"]
+[ext_resource type="Script" uid="uid://cilkkfcx35tr5" path="res://Scripts/local/player_information.gd" id="12_1l0bo"]
+[ext_resource type="Script" uid="uid://egyfxtv3y03e" path="res://Scripts/local/enemy_information.gd" id="13_q25lh"]
+[ext_resource type="Script" uid="uid://bme0tpbm87h1g" path="res://Scripts/local/enemy_card_display.gd" id="14_nsxev"]
+[ext_resource type="PackedScene" uid="uid://5wot5ifi785i" path="res://Prefabs/card_display.tscn" id="15_dhbxl"]
+[ext_resource type="Script" uid="uid://rfg32chlluni" path="res://Scripts/local/player_card_display.gd" id="16_b5uxt"]
+[ext_resource type="PackedScene" uid="uid://bdyoqi703wido" path="res://Prefabs/pause_screen.tscn" id="17_mi3ry"]
+[ext_resource type="Shader" uid="uid://b1ueo5twlw5jk" path="res://Shaders/blur.gdshader" id="18_1yfkk"]
+[ext_resource type="PackedScene" uid="uid://devf7nvpogvy0" path="res://Prefabs/oddtodd.tscn" id="18_jb51l"]
+
+[sub_resource type="Curve" id="Curve_sojq8"]
+_data = [Vector2(0, 0), 0.0, 3.94919, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.949, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_hi7j2"]
+_limits = [-1.0, 1.0, 1.49012e-08, 1.0]
+_data = [Vector2(1.49012e-08, -1), 0.0, 1.73096, 0, 0, Vector2(0.5, 1.49012e-08), 0.0, 0.0, 0, 0, Vector2(0.978724, 1), 1.731, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nvdnq"]
+shader = ExtResource("18_1yfkk")
+shader_parameter/lod = 0.75
+
+[sub_resource type="Animation" id="Animation_nvdnq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blur:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TurnCount:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Blur:material:shader_parameter/lod")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.75]
+}
+
+[sub_resource type="Animation" id="Animation_2iyix"]
+resource_name = "fast_turn_off"
+length = 0.05
+
+[sub_resource type="Animation" id="Animation_vee5s"]
+resource_name = "turncount"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blur:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TurnCount:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Blur:material:shader_parameter/lod")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.75]
+}
+
+[sub_resource type="Animation" id="Animation_ccvv3"]
+resource_name = "turncountfadeaway"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TurnCount:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Blur:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Blur:material:shader_parameter/lod")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.75, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ccvv3"]
+_data = {
+&"RESET": SubResource("Animation_nvdnq"),
+&"fast_turn_off": SubResource("Animation_2iyix"),
+&"turncount": SubResource("Animation_vee5s"),
+&"turncountfadeaway": SubResource("Animation_ccvv3")
+}
+
+[node name="Main" type="Node2D"]
+
+[node name="dice_arrow" parent="." instance=ExtResource("1_jb51l")]
+z_index = -1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+script = ExtResource("2_dxsep")
+
+[node name="UIManager" type="Node" parent="."]
+script = ExtResource("3_lexqi")
+
+[node name="BattleManager" type="Node" parent="."]
+script = ExtResource("4_pkgwa")
+enemy_to_spawn = ExtResource("18_jb51l")
+
+[node name="CardManager" type="Node2D" parent="."]
+script = ExtResource("5_radxo")
+
+[node name="CardTargetSelector" parent="." instance=ExtResource("6_1cu4j")]
+
+[node name="CardGenerator" type="Node2D" parent="."]
+script = ExtResource("7_djl3p")
+
+[node name="InputManager" type="Node2D" parent="."]
+process_mode = 3
+script = ExtResource("8_73805")
+
+[node name="PlayerHand" type="Node2D" parent="."]
+script = ExtResource("9_lh8ri")
+hand_curve = SubResource("Curve_sojq8")
+rotation_curve = SubResource("Curve_hi7j2")
+
+[node name="EnemyTeamContainer" type="VBoxContainer" parent="."]
+offset_left = 726.0
+offset_top = 29.0
+offset_right = 1208.0
+offset_bottom = 449.0
+
+[node name="Control" type="Control" parent="EnemyTeamContainer"]
+layout_mode = 2
+
+[node name="PlayerTeamContainer" type="VBoxContainer" parent="."]
+offset_left = 13.0
+offset_top = 26.0
+offset_right = 387.0
+offset_bottom = 440.0
+
+[node name="Control" type="Control" parent="PlayerTeamContainer"]
+layout_mode = 2
+
+[node name="Player" parent="PlayerTeamContainer/Control" instance=ExtResource("11_0upaw")]
+position = Vector2(73, 332)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerInformation" type="VBoxContainer" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -79.0
+offset_right = 232.0
+offset_bottom = -2.0
+script = ExtResource("12_1l0bo")
+
+[node name="Health" type="Label" parent="CanvasLayer/UI/PlayerInformation"]
+layout_mode = 2
+
+[node name="Stagger" type="Label" parent="CanvasLayer/UI/PlayerInformation"]
+layout_mode = 2
+
+[node name="EnemyInformation" type="VBoxContainer" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 843.0
+offset_top = -79.0
+offset_right = 1144.0
+offset_bottom = -2.0
+script = ExtResource("13_q25lh")
+
+[node name="Health" type="Label" parent="CanvasLayer/UI/EnemyInformation"]
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="Stagger" type="Label" parent="CanvasLayer/UI/EnemyInformation"]
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="EnemyCardDisplayed" type="HBoxContainer" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 698.0
+offset_top = -139.0
+offset_right = 826.0
+offset_bottom = 46.0
+scale = Vector2(0.75, 0.75)
+theme_override_constants/separation = 5
+script = ExtResource("14_nsxev")
+
+[node name="Card_display" parent="CanvasLayer/UI/EnemyCardDisplayed" instance=ExtResource("15_dhbxl")]
+layout_mode = 2
+
+[node name="PlayerCardDisplay" type="HBoxContainer" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = -140.0
+offset_right = 317.0
+offset_bottom = 46.0
+scale = Vector2(0.75, 0.75)
+script = ExtResource("16_b5uxt")
+
+[node name="Card_display2" parent="CanvasLayer/UI/PlayerCardDisplay" instance=ExtResource("15_dhbxl")]
+custom_minimum_size = Vector2(128, 186)
+layout_mode = 2
+
+[node name="PauseScreen" parent="CanvasLayer/UI" instance=ExtResource("17_mi3ry")]
+layout_mode = 1
+
+[node name="TurnCounter" type="Control" parent="CanvasLayer/UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Blur" type="ColorRect" parent="CanvasLayer/UI/TurnCounter"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_nvdnq")
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+mouse_filter = 2
+
+[node name="TurnCount" type="Label" parent="CanvasLayer/UI/TurnCounter"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 337.0
+offset_top = 250.0
+offset_right = 789.0
+offset_bottom = 369.0
+theme_override_font_sizes/font_size = 75
+text = "TURN 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TurnCountAnimation" type="AnimationPlayer" parent="CanvasLayer/UI/TurnCounter"]
+libraries = {
+&"": SubResource("AnimationLibrary_ccvv3")
+}

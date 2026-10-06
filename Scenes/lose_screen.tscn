@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwiyt1r18gto6"]
+
+[ext_resource type="Script" uid="uid://bprqrsbevgop3" path="res://Scripts/local/lose_screen.gd" id="1_s2rrh"]
+[ext_resource type="Texture2D" uid="uid://dx30pn338td77" path="res://Sprites/Background/LoseBackground.png" id="2_488pv"]
+
+[node name="LoseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2rrh")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_488pv")
+
+[node name="DEFEAT" type="Label" parent="."]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 120.0
+offset_right = 772.0
+offset_bottom = 257.0
+theme_override_font_sizes/font_size = 100
+text = "DEFEAT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="Button" parent="."]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 301.0
+offset_right = 816.0
+offset_bottom = 353.0
+theme_override_font_sizes/font_size = 25
+text = "Continue"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 372.0
+offset_right = 817.0
+offset_bottom = 424.0
+theme_override_font_sizes/font_size = 25
+text = "Quit"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 270.0
+offset_right = 470.0
+offset_bottom = 482.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Nothing" type="Label" parent="."]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 329.0
+offset_right = 389.0
+offset_bottom = 413.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "Nothing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 210.0
+offset_right = 323.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 18
+text = "Items Lost"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

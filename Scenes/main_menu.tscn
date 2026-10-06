@@ -1,0 +1,177 @@
+[gd_scene load_steps=23 format=3 uid="uid://bkexkqb6wkxxs"]
+
+[ext_resource type="Script" uid="uid://hyykx72v5r1i" path="res://Scripts/local/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://coikyffa8rn5l" path="res://Sprites/Background/Main_Menu (2).png" id="2_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://d01s4bxeclqbs" path="res://Sprites/Characters/Looking Right.png" id="3_ce3w2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ce3w2"]
+atlas = ExtResource("2_1ehe0")
+region = Rect2(0, 0, 1152, 642)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n45e2"]
+atlas = ExtResource("2_1ehe0")
+region = Rect2(0, 642, 1152, 642)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_opfnp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ce3w2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n45e2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ehe0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ce3w2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n45e2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opfnp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5egv6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t1dhk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vtepg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cp0ys"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8dnnj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhxw7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m3bi6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_trj04"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wyh8j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_16hvj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujyyl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vr1f0"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_28flt")
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 321)
+sprite_frames = SubResource("SpriteFrames_opfnp")
+autoplay = "default"
+frame_progress = 0.460158
+
+[node name="LookingLeftCorrections" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Looking_Left_Correction" type="ColorRect" parent="LookingLeftCorrections"]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 340.0
+offset_right = 549.0
+offset_bottom = 361.0
+color = Color(1, 0.886275, 0.772549, 1)
+
+[node name="Looking_Left_Correction2" type="ColorRect" parent="LookingLeftCorrections"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 334.0
+offset_right = 566.0
+offset_bottom = 351.0
+color = Color(1, 0.886275, 0.772549, 1)
+
+[node name="Looking_Left_Correction3" type="ColorRect" parent="LookingLeftCorrections"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 320.0
+offset_right = 557.0
+offset_bottom = 351.0
+color = Color(1, 0.886275, 0.772549, 1)
+
+[node name="Looking_Right_Correction" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 302.0
+offset_right = 616.0
+offset_bottom = 361.0
+color = Color(1, 0.886275, 0.772549, 1)
+
+[node name="Glasses" type="Sprite2D" parent="."]
+position = Vector2(543, 322)
+texture = ExtResource("3_ce3w2")
+
+[node name="Levels" type="Button" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 111.0
+offset_right = 215.0
+offset_bottom = 273.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.47451, 0.47451, 0.47451, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1ehe0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n45e2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_opfnp")
+text = "Levels"
+
+[node name="Deck" type="Button" parent="."]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 5.0
+offset_right = 480.0
+offset_bottom = 137.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.47451, 0.47451, 0.47451, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5egv6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t1dhk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vtepg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cp0ys")
+text = "Deck"
+
+[node name="Juicing" type="Button" parent="."]
+layout_mode = 0
+offset_left = 724.0
+offset_top = -3.0
+offset_right = 1013.0
+offset_bottom = 127.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.47451, 0.47451, 0.47451, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8dnnj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yhxw7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m3bi6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_trj04")
+text = "JUICING"
+
+[node name="Options" type="Button" parent="."]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 223.0
+offset_right = 1086.0
+offset_bottom = 322.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.47451, 0.47451, 0.47451, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wyh8j")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_16hvj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ujyyl")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vr1f0")
+text = "Options"
+
+[connection signal="mouse_entered" from="Levels" to="." method="_on_levels_mouse_entered"]
+[connection signal="mouse_entered" from="Deck" to="." method="_on_teams_mouse_entered"]
+[connection signal="mouse_entered" from="Juicing" to="." method="_on_juicing_mouse_entered"]
+[connection signal="mouse_entered" from="Options" to="." method="_on_options_mouse_entered"]
